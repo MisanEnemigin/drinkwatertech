@@ -1,0 +1,392 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Raleway;
+}
+
+.loader {
+    position:fixed;
+    width: 100%;
+    height: 100vh;
+    background: teal;
+    z-index: 7000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Starts */
+nav {
+    margin: 0 100px;
+    top: 0;
+    /* position: fixed; */
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #fff;
+    width: 84%;
+    z-index: 2000;
+}
+
+.stick {
+    /* background: rgb(105, 105, 105); */
+    /* width: 100%; */
+    position: fixed;
+    margin-top: 0;
+    /* box-shadow: 0 5px 10px 3px black; */
+    animation: navAnimate .7s linear;
+    -webkit-animation: navAnimate .7s linear;
+}
+
+@keyframes navAnimate {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    };
+}
+
+@-webkit-keyframes navAnimate {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    };
+}
+
+.unstick {
+    animation: navAnimateGo .7s linear;
+    -webkit-animation: navAnimateGo .7s linear;
+}
+
+@keyframes navAnimateGo {
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100px);
+        opacity: 0;
+    };
+}
+
+@-webkit-keyframes navAnimateGo {
+    0%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-100px);
+        opacity: 0;
+    };
+}
+
+.burger {
+    display: none;
+    width: 9%;
+    float: right;
+}
+
+nav div {
+    float: left;
+}
+
+.logoImg {
+    color: teal;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.mainNav {
+    display: inline-flex;
+    float: right;
+}
+
+.mainNav li {
+    list-style: none;
+    /* padding-left: 10px; */
+}
+
+.mainNav li a{
+    font-size: 25px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+    /* background: orange; */
+    padding: 24px 24px;
+    outline: none;
+    opacity: .8;
+}
+
+.mainNav li a:hover {
+    opacity: 1;
+    /* color: white; */
+}
+
+.mainNav li a.active {
+    background: teal;
+}
+
+.phoneNav {
+    background: white;
+    /* width: 90%;
+    top: 100px; */
+    display: none;
+    /* position: fixed; */
+    z-index: 1000;
+    /* box-shadow: 0px 15px 40px 2px #222; */
+}
+
+
+
+
+
+/* Footer */
+
+.footer_div {
+    background: #111;
+}
+
+.footer_inner {
+    margin: 10px;
+    /* background: whitesmoke; */
+    text-align: center;
+}
+
+.footer_inner img {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    display: block;
+}
+
+.f_caption {
+    color: #eee;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 5px;
+    display: block;
+}
+
+.f_details {
+    color: #eee;
+    text-decoration: none;
+}
+
+
+.under_f center img {
+    width: auto;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 12px;
+    color: rgb(173, 173, 173);
+}
+
+/* Back To Top */
+.back_to_top {
+    visibility: hidden;
+    height: 7vh;
+    position: fixed;
+    right: -100px;
+    bottom: 24px;
+    width: 6%;
+    background: teal;
+    transition: right 1s ease;
+}
+
+.back_to_top img{
+    position: fixed;
+    right: -130px;
+    bottom: 45px;
+    /* transform: rotate(90deg); */
+    transition: right 1s ease;
+}
+
+.b2d_show {
+    visibility: visible;
+    right: 0;
+    transition: right 1s ease;
+}
+
+.b2d_show img {
+    right: 30px;
+    transition: right 1s ease;
+}
+
+.back_to_top:hover  img{
+    /* transform: rotate(0deg); */
+    animation: arrowBounce .4s linear infinite;
+}
+
+@keyframes arrowBounce {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);          
+    }
+    100%{
+        transform: translateY(-10px);  
+    };
+}
+
+
+@media screen and (max-width: 1100px) and (min-width: 800px){
+    nav{
+        margin: 0 80px;
+        margin-top: 30px;
+    }
+
+    logoImg{
+        font-size: 10px;
+    }
+
+    .mainNav li a {
+        font-size: 15px; 
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 680px){
+    nav {
+        margin: 0 55px;
+        margin-top: 30px;
+    }
+
+    logoImg{
+        font-size: 10px;
+    }
+
+    .mainNav li a {
+        font-size: 15px;
+        padding: 24px 10px;
+    }
+}
+
+@media screen and (max-width: 680px){
+    nav {
+        width: 90%;
+        margin: 0 18px;
+        margin-top: 30px;
+    }
+
+    .sticky {
+        position: fixed;
+    }
+
+    .logoImg {
+        font-size: 20px;
+    }
+
+    .mainNav {
+       display: none;
+   }
+
+    .burger {
+        display: block;
+    }
+
+    .phoneNav {
+        clear: both;
+        overflow: hidden;
+        visibility: hidden;
+        height: 0vh;
+        /* transition: all .4s ease; */
+
+    }
+
+    .phoneNav li {
+        list-style: none;
+        padding: 6px 0;
+    }
+
+    .li1{
+        animation: moveRight .7s linear;
+    }
+
+    .li2{
+        animation: moveRight .9s linear;
+    }
+
+    .li3{
+        animation: moveRight 1s linear;
+    }
+
+    .li4{
+        animation: moveRight 1.2s linear;
+    }
+
+    .phoneNav li a {
+        text-decoration: none;
+        padding: 6px;
+        color: black;
+        opacity: .7;
+        outline: none;
+    }
+    
+    .phoneNav li a:hover {
+        opacity: 1;
+    }
+
+    .phoneNav.block {
+        display: block;
+        visibility: visible;
+        height: auto;
+    }
+
+    @keyframes moveRight {
+        0%{
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 1;
+        };
+    }
+
+    /* Back To Top */
+    .back_to_top {
+        opacity: 0;
+        height: 5vh;
+        position: fixed;
+        right: 10px;
+        bottom: 24px;
+        width: 10%;
+        background: teal;
+        transition: opacity 3s ease;
+    }
+
+    .back_to_top img{
+        opacity: 0;
+        /* width: 10%; */
+        position: fixed;
+        right: 17px;
+        bottom: 38px;
+        /* transform: rotate(90deg); */
+        transition: opacity 3s ease;
+        animation: arrowBounce .4s linear infinite;
+    }
+
+    .b2d_show {
+        opacity: 1;
+        visibility: visible;
+        /* right: 15px; */
+        transition: opacity 3s ease;
+    }
+
+    .b2d_show img {
+        opacity: 1;
+        /* right: 10px; */
+        transition: opacity 3s ease;
+    }
+}

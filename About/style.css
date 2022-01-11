@@ -1,0 +1,152 @@
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.623),rgba(0, 0, 0, 0.637)), url(../Images/Background.jpg   );
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+
+.header_container {
+    align-items: center;
+    margin-top: 250px;
+    justify-content: center;
+    display: flex;
+}
+
+.typewriter {
+    color: #eee;
+    font-size: 50px;
+}
+.cursor {
+    background: teal;
+    height: 8vh;
+    width: 10px;
+    /* transform: translateX(-600px); */
+    /* animation: cursorMove 5s linear; */
+    animation: blink .2s linear infinite;
+}
+
+/* @keyframes cursorMove {
+    0% {
+        transform: translateX(-600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} */
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* Main About */
+.main_about {
+    background: #fff;
+    overflow: hidden;
+}
+
+.m_pic_ {
+    background: teal;
+    width: auto;
+    height: 60vh;
+}
+
+.m_content {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.m_content_title {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: teal;
+}
+
+.m_content_subtitle {
+    font-size: 25px;
+    padding-top: 10px;
+    color: rgb(94, 129, 129)
+}
+
+.m_content_text {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.m_content_show {
+    visibility: visible;
+    animation: moveUpM 1s linear;
+}
+
+@keyframes moveUpM {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Achievements */
+.achievements {
+    background: black;
+    text-align: center;
+    color: #fff;
+}
+
+.fllwers_num, .stnds_num, .class_num, .courses_num {
+    font-size: 60px;
+    font-weight: 700;
+    font-family: Century Gothic;
+}
+
+.fllwers_text, .stnds_text, .class_text, .courses_text {
+    font-size: 20px;
+}
+
+.followers {
+    visibility: visible;
+}
+
+
+/* Team */
+.teamImage {
+    width: 100%;
+    transition: all .5s ease;
+}
+
+.first_team_img {
+    width: 100%;
+    height: 54vh;
+    overflow: hidden;
+}
+
+.first_team:hover .teamImage {
+    transition: all .5s ease;
+    width: 120%;
+    transform: translateY(-50px) rotate(10deg);
+}
+
+/* .f_writeUp {
+    background: grey;
+    width: 100%;
+    height: 54vh;
+    position: absolute;
+    right: 10px;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+} */
